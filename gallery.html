@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | My Dreamy Journal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-[#FFFBFC] min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-white/50 border-b border-pink-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="title-font text-3xl font-bold text-[#FF9AA2]">Dreamy Journal</a>
+            <div class="hidden md:flex gap-8">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="weeks/index.html" class="nav-link">Weekly Blog</a>
+                <a href="gallery.html" class="nav-link active">Gallery</a>
+            </div>
+            <button class="md:hidden text-2xl" id="menu-btn">🌸</button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-[#FFD1DC]/95 z-[60] flex flex-col items-center justify-center gap-8 text-2xl font-semibold hidden">
+        <button class="absolute top-6 right-6 text-3xl" id="close-menu">✕</button>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="weeks/index.html">Weekly Blog</a>
+        <a href="gallery.html">Gallery</a>
+    </div>
+
+    <!-- Gallery Content -->
+    <main class="pt-32 pb-20 px-6">
+        <div class="container mx-auto">
+            <header class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Captured <span
+                        class="gradient-text italic">Moments</span></h1>
+                <p class="text-gray-500 max-w-xl mx-auto">A visual record of the weeks gone by. Every photo tells a
+                    story of student life.</p>
+            </header>
+
+            <!-- Week 1 Section -->
+            <div class="mb-20">
+                <div class="flex items-center gap-4 mb-8">
+                    <h2 class="text-2xl font-bold">Week 1: New Roots</h2>
+                    <div class="flex-1 h-px bg-pink-50"></div>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <div
+                        class="group relative aspect-square glass-card overflow-hidden cursor-zoom-in animate-float-slow">
+                        <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80&w=400"
+                            alt="Detail 1"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                        <div
+                            class="absolute inset-0 bg-pink-400/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+                    <div class="group relative aspect-square glass-card overflow-hidden cursor-zoom-in animate-float"
+                        style="animation-delay: 1s">
+                        <img src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&q=80&w=400"
+                            alt="Detail 2"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                        <div
+                            class="absolute inset-0 bg-blue-400/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+                    <div
+                        class="group relative aspect-square glass-card overflow-hidden cursor-zoom-in animate-float-reverse">
+                        <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&q=80&w=400"
+                            alt="Detail 3"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                        <div
+                            class="absolute inset-0 bg-lavender-400/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+                    <div
+                        class="group relative aspect-square glass-card overflow-hidden bg-pink-50 flex items-center justify-center text-pink-200">
+                        <span class="text-xs italic">More to add...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future Week Placeholder -->
+            <div>
+                <div class="flex items-center gap-4 mb-8 opacity-30">
+                    <h2 class="text-2xl font-bold">Week 2: Pending...</h2>
+                    <div class="flex-1 h-px bg-gray-200"></div>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div
+                        class="aspect-square rounded-3xl border-2 border-dashed border-gray-100 flex items-center justify-center text-gray-200">
+                        📷
+                    </div>
+                    <div
+                        class="aspect-square rounded-3xl border-2 border-dashed border-gray-100 flex items-center justify-center text-gray-200">
+                        📷
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox (Simplified) -->
+    <div id="lightbox" class="fixed inset-0 bg-black/90 z-[100] hidden items-center justify-center p-6">
+        <button id="close-lightbox" class="absolute top-6 right-6 text-white text-3xl">✕</button>
+        <img id="lightbox-img" src="" class="max-w-full max-h-full rounded-2xl">
+    </div>
+
+    <footer class="bg-white/80 border-t border-pink-50 py-10 mt-20">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-sm text-gray-400 font-medium">© 2026 Monthly Journal Project • Created for Academic
+                Submission</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

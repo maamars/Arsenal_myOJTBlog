@@ -1,0 +1,226 @@
+/* 
+  DREAMY JOURNAL - Design System
+  Theme: Cute, Soft, Aesthetic
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Quicksand:wght@300;400;500;600;700&family=Dancing+Script:wght@400;700&display=swap');
+
+:root {
+    --p-pink: #FFD1DC;
+    --p-blue: #B0E0E6;
+    --p-lavender: #E6E6FA;
+    --p-cream: #FFFDD0;
+    --p-mint: #C1F0C1;
+    --text-main: #5D5D5D;
+    --accent: #FF9AA2;
+    --bg-main: #FFFBFC;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+.handwritten {
+    font-family: 'Outfit', sans-serif;
+    color: #4A4A4A;
+}
+
+.title-font {
+    font-family: 'Dancing Script', cursive;
+}
+
+/* Floating Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+@keyframes float-reverse {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(15px) rotate(-5deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+@keyframes sway {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes sparkle {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: scale(1.2);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+    animation: float 8s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+    animation: float-reverse 7s ease-in-out infinite;
+}
+
+.animate-sparkle {
+    animation: sparkle 3s ease-in-out infinite;
+}
+
+/* Custom Utilities */
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(255, 182, 193, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.glass-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 40px 0 rgba(255, 182, 193, 0.2);
+}
+
+.soft-shadow {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, #FF9AA2, #B5EAD7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Floating Elements Container */
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.f-item {
+    position: absolute;
+    opacity: 0.4;
+    user-select: none;
+}
+
+/* Main Navigation */
+.nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+    color: var(--text-main);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: var(--p-pink);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 80%;
+}
+
+.nav-link:hover {
+    color: var(--accent);
+}
+
+/* Day Cards */
+.day-card {
+    border-left: 4px solid var(--p-pink);
+    padding-left: 20px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.day-card::before {
+    content: '✨';
+    position: absolute;
+    left: -14px;
+    top: -5px;
+    background: white;
+    padding: 2px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .f-item {
+        display: none;
+    }
+
+    /* Disable some floaties on mobile */
+}
+/* Scroll Reveal Classes */
+.reveal-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}

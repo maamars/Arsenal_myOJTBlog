@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 | My Dreamy Journal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="bg-[#FFFBFC] min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-white/50 border-b border-pink-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="title-font text-3xl font-bold text-[#FF9AA2]">Dreamy Journal</a>
+            <div class="hidden md:flex gap-8">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="index.html" class="nav-link active">Weekly Blog</a>
+                <a href="../gallery.html" class="nav-link">Gallery</a>
+            </div>
+            <button class="md:hidden text-2xl" id="menu-btn">🌸</button>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <!-- Breadcrumbs -->
+            <div class="mb-8 flex items-center gap-2 text-sm text-gray-400 font-medium">
+                <a href="index.html" class="hover:text-pink-400 transition-colors">Weeks</a>
+                <span>›</span>
+                <span class="text-gray-600">Week 1</span>
+            </div>
+
+            <header class="mb-16">
+                <span class="text-pink-400 font-bold uppercase tracking-widest text-sm block mb-2">December 09 – 15,
+                    2025</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Week 1: New Roots</h1>
+                <p class="text-gray-500 italic max-w-2xl">Reflections on stepping into a new semester, setting goals,
+                    and finding my rhythm.</p>
+            </header>
+
+            <!-- Daily Entries -->
+            <div class="space-y-12">
+                <!-- Day 1 -->
+                <article class="day-card animate-f-up relative">
+                    <div class="mb-6">
+                        <h2 class="text-2xl font-bold text-gray-800">Tuesday, Dec 9</h2>
+                        <span class="text-sm font-semibold text-blue-400">First Day Jitters</span>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 items-start">
+                        <div class="prose text-gray-600 leading-relaxed italic">
+                            "Today marks the beginning of a long journey. The air feels different today, maybe because
+                            of the anticipation.
+                            I spent the morning organizing my workspace and sketching out the timeline for this journal.
+                            It's important to start with intention."
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div
+                                class="aspect-square bg-pink-50 rounded-2xl overflow-hidden shadow-sm hover:scale-105 transition-transform cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80&w=300"
+                                    alt="Workspace" class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="aspect-square bg-blue-50 rounded-2xl overflow-hidden shadow-sm hover:rotate-3 transition-transform cursor-pointer">
+                                <img src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&q=80&w=300"
+                                    alt="Planner" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Cute divider -->
+                    <div class="mt-8 text-center text-pink-100">🌸 🌸 🌸</div>
+                </article>
+
+                <!-- Day 2 -->
+                <article class="day-card animate-f-up">
+                    <div class="mb-6">
+                        <h2 class="text-2xl font-bold text-gray-800">Wednesday, Dec 10</h2>
+                        <span class="text-sm font-semibold text-pink-400">Finding the Flow</span>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 items-start">
+                        <div class="grid grid-cols-1 gap-4">
+                            <div class="aspect-video bg-lavender-50 rounded-2xl overflow-hidden shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&q=80&w=500"
+                                    alt="Study Session" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="prose text-gray-600 leading-relaxed italic">
+                            "Found a cozy cafe near the library today. The ambient noise really helps me focus.
+                            I managed to finish my first set of readings. Small victories feel so good!
+                            I'm starting to settle into a rhythm."
+                        </div>
+                    </div>
+                    <div class="mt-8 text-center text-blue-50">✨ ✨ ✨</div>
+                </article>
+
+                <!-- Placeholder for other days -->
+                <div
+                    class="p-8 border-2 border-dashed border-pink-100 rounded-3xl text-center text-gray-400 bg-white/50 italic text-sm">
+                    Continue documenting thoughts for the rest of the week...
+                </div>
+            </div>
+
+            <!-- Page Navigation -->
+            <div class="mt-20 flex justify-between border-t border-pink-100 pt-10">
+                <span class="text-gray-300">Previous Week</span>
+                <a href="#" class="text-pink-400 font-bold hover:underline">Next Week: Coming Soon →</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white/80 border-t border-pink-50 py-10">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-sm text-gray-400 font-medium">© 2026 Monthly Journal Project • Created for Academic
+                Submission</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
