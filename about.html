@@ -7,20 +7,72 @@
     <title>About Me | My Dreamy Journal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .resume-section {
+            margin-bottom: 3rem;
+        }
+
+        .resume-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #1f2937;
+        }
+
+        .resume-item {
+            margin-bottom: 1rem;
+            border-left: 2px solid #fdf2f2;
+            padding-left: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .resume-item:hover {
+            border-left-color: #ffd1dc;
+        }
+
+        .resume-date {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #f472b6;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.25rem;
+            display: block;
+        }
+
+        .pill {
+            padding: 0.25rem 0.75rem;
+            background: white;
+            border: 1px solid #fdf2f2;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            color: #4b5563;
+            display: inline-block;
+            margin: 0.25rem;
+        }
+    </style>
 </head>
 
 <body class="bg-[#FFFBFC] min-h-screen">
-    <!-- Navigation (Same as index) -->
+    <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-white/50 border-b border-pink-100">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <a href="index.html" class="title-font text-3xl font-bold text-[#FF9AA2]">Dreamy Journal</a>
-            <div class="hidden md:flex gap-8">
+            <div class="hidden lg:flex gap-1 xl:gap-2">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link active">About</a>
-                <a href="weeks/index.html" class="nav-link">Weekly Blog</a>
-                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="#" class="nav-link">Acknowledgement</a>
+                <a href="about.html" class="nav-link active">My Profile</a>
+                <a href="school.html" class="nav-link">School Profile</a>
+                <a href="weeks/index.html" class="nav-link">OJT Blogs</a>
+                <a href="#" class="nav-link">Internship Evidence</a>
+                <a href="#" class="nav-link">Eductour</a>
+                <a href="#" class="nav-link">ResearchFest</a>
+                <a href="#" class="nav-link">Trainings/Worshops</a>
             </div>
-            <button class="md:hidden text-2xl" id="menu-btn">🌸</button>
+            <button class="lg:hidden text-2xl text-pink-400" id="menu-btn">🌸</button>
         </div>
     </nav>
 
@@ -28,90 +80,177 @@
     <div id="mobile-menu"
         class="fixed inset-0 bg-[#FFD1DC]/95 z-[60] flex flex-col items-center justify-center gap-8 text-2xl font-semibold hidden">
         <button class="absolute top-6 right-6 text-3xl" id="close-menu">✕</button>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="weeks/index.html">Weekly Blog</a>
-        <a href="gallery.html">Gallery</a>
+        <span class="title-font text-4xl text-white mb-4">Dreamy Journal</span>
+        <a href="index.html" class="hover:text-white transition-colors">Home</a>
+        <a href="about.html" class="hover:text-white transition-colors">My Profile</a>
+        <a href="school.html" class="hover:text-white transition-colors">School Profile</a>
+        <a href="weeks/index.html" class="hover:text-white transition-colors">OJT Blogs</a>
+        <a href="gallery.html" class="hover:text-white transition-colors">Gallery</a>
     </div>
 
     <!-- About Content -->
     <main class="pt-32 pb-20 px-6">
-        <div class="container mx-auto max-w-4xl">
-            <div class="glass-card p-8 md:p-16 relative overflow-hidden">
+        <div class="container mx-auto max-w-5xl">
+            <!-- Header Profile Section -->
+            <div class="glass-card p-8 md:p-12 mb-10 relative overflow-hidden">
                 <div class="absolute -top-10 -right-10 w-40 h-40 bg-pink-100 rounded-full blur-3xl opacity-50"></div>
 
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="relative">
+                <div class="grid md:grid-cols-3 gap-10 items-center">
+                    <div class="md:col-span-1 relative">
                         <div
-                            class="w-full aspect-[4/5] bg-blue-50 rounded-3xl overflow-hidden shadow-soft animate-float">
-                            <!-- Placeholder for Student Photo -->
-                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=400"
-                                alt="Student Profile" class="w-full h-full object-cover">
+                            class="aspect-[3/4] bg-blue-50 rounded-3xl overflow-hidden shadow-soft animate-float border-4 border-white">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400"
+                                alt="Hasmin E. Arsenal" class="w-full h-full object-cover">
                         </div>
-                        <!-- Floaties around image -->
                         <div class="absolute -bottom-4 -right-4 text-3xl animate-float-slow">✨</div>
-                        <div class="absolute -top-4 -left-4 text-3xl animate-float-reverse">☁️</div>
                     </div>
 
-                    <div>
-                        <span class="text-pink-400 font-bold uppercase tracking-widest text-sm mb-2 block">Hi there!
-                            👋</span>
-                        <h1 class="text-4xl font-extrabold mb-6">Seeking Bloom in the <span
-                                class="gradient-text italic">Academic Garden</span></h1>
-                        <p class="text-gray-500 mb-6 leading-relaxed">
-                            Welcome to my digital sanctuary. I am a student dedicated to documenting the highlights and
-                            challenges of my academic journey.
-                            This blog serves as a reflective journal where I capture weekly experiences, study sessions,
-                            and moments of inspiration.
+                    <div class="md:col-span-2">
+                        <h1 class="text-4xl md:text-5xl font-extrabold mb-2 text-gray-800">Hasmin E. <span
+                                class="gradient-text italic">Arsenal</span></h1>
+                        <p class="text-pink-400 font-bold tracking-[0.2em] text-sm mb-6 flex items-center gap-2">
+                            PROJECT MANAGER <span class="text-gray-200">|</span> QUALITY ASSURANCE
                         </p>
 
-                        <div class="space-y-4">
-                            <div class="flex items-center gap-4 group">
-                                <div
-                                    class="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center group-hover:bg-pink-200 transition-colors">
-                                    🎯</div>
-                                <span class="text-gray-600 font-medium">Goal-Oriented Learner</span>
-                            </div>
-                            <div class="flex items-center gap-4 group">
-                                <div
-                                    class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center group-hover:bg-blue-200 transition-colors">
-                                    🎨</div>
-                                <span class="text-gray-600 font-medium">Creative Content Curator</span>
-                            </div>
-                            <div class="flex items-center gap-4 group">
-                                <div
-                                    class="w-10 h-10 rounded-full bg-lavender-100 flex items-center justify-center group-hover:bg-lavender-200 transition-colors">
-                                    ☕</div>
-                                <span class="text-gray-600 font-medium">Coffee & Code Enthusiast</span>
-                            </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 text-sm text-gray-500">
+                            <div class="flex items-center gap-2"><span>📱</span> +63 907-416-8575</div>
+                            <div class="flex items-center gap-2"><span>📧</span> hasmin.arsenal@sccpag.edu.ph</div>
+                            <div class="flex items-center gap-2"><span>📍</span> Pagadian City</div>
+                            <div class="flex items-center gap-2"><span>🎂</span> May 10, 2003</div>
                         </div>
+
+                        <p class="text-gray-600 leading-relaxed italic border-l-4 border-pink-100 pl-6 mb-6">
+                            "I am a motivated and dedicated Information Technology student at Saint Columban College.
+                            Throughout my academic journey, I have developed strong skills in web development,
+                            UI/UX design, project management, and technical documentation."
+                        </p>
                     </div>
                 </div>
+            </div>
 
-                <hr class="my-12 border-pink-50">
+            <!-- Detailed Sections -->
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Left Column: Education & Skills -->
+                <div class="md:col-span-1 space-y-10">
+                    <section class="glass-card p-8">
+                        <h2 class="resume-title"><span>🎓</span> Education</h2>
+                        <div class="resume-item">
+                            <span class="resume-date">2023 - Present</span>
+                            <h4 class="font-bold text-gray-700">Saint Columban College</h4>
+                            <p class="text-xs text-gray-500">BS In Information Technology</p>
+                        </div>
+                        <div class="resume-item">
+                            <span class="resume-date">2020 - 2022</span>
+                            <h4 class="font-bold text-gray-700">Senior High School</h4>
+                            <p class="text-xs text-gray-500">ICT - Programming</p>
+                        </div>
+                        <div class="resume-item">
+                            <span class="resume-date">2010 - 2016</span>
+                            <h4 class="font-bold text-gray-700">Elementary School</h4>
+                            <p class="text-xs text-gray-500">Primary Education</p>
+                        </div>
+                    </section>
 
-                <div class="prose max-w-none text-gray-500 leading-relaxed">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-                        Purpose of this Blog <span class="text-pink-300 animate-float-slow">🎀</span>
-                    </h2>
-                    <p class="mb-6">
-                        This project was created for an academic requirement, but it has evolved into a personal
-                        creative outlet.
-                        By documenting entries from <strong>December 2025 to March 2026</strong>, I hope to look back
-                        and see the progress made in both my studies and my personal journey.
-                    </p>
-                    <p>
-                        Every photo and every word shared here is a piece of my student life. Whether it's a stressful
-                        exam week or a peaceful weekend walk,
-                        everything finds a home in this <em>Dreamy Journal</em>.
-                    </p>
+                    <section class="glass-card p-8">
+                        <h2 class="resume-title"><span>✨</span> Skills</h2>
+                        <div class="mb-4">
+                            <h4 class="text-xs font-bold text-pink-300 uppercase mb-2">Technical</h4>
+                            <div class="flex flex-wrap">
+                                <span class="pill">HTML/CSS/JS</span>
+                                <span class="pill">PHP</span>
+                                <span class="pill">Java/C#</span>
+                                <span class="pill">VS Code</span>
+                                <span class="pill">Figma/Canva</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-blue-300 uppercase mb-2">Management</h4>
+                            <div class="flex flex-wrap">
+                                <span class="pill">Leadership</span>
+                                <span class="pill">Time Management</span>
+                                <span class="pill">Problem Solving</span>
+                                <span class="pill">Documentation</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="glass-card p-8">
+                        <h2 class="resume-title"><span>🏆</span> Awards</h2>
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li class="flex items-start gap-2"><span>⭐</span> Dean's Lister (2023-2025)</li>
+                            <li class="flex items-start gap-2"><span>⭐</span> Class Salutatorian (2015-2016)</li>
+                            <li class="flex items-start gap-2"><span>⭐</span> Campus Journalism 3rd Place</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <!-- Right Column: Projects & Experience -->
+                <div class="md:col-span-2 space-y-10">
+                    <section class="glass-card p-8">
+                        <h2 class="resume-title"><span>💻</span> Key Projects</h2>
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div
+                                class="bg-pink-50/30 p-6 rounded-3xl border border-pink-50 hover:bg-pink-50/50 transition-all">
+                                <span class="resume-date">2025</span>
+                                <h4 class="font-bold text-gray-700 mb-2">Food Reservation System</h4>
+                                <p class="text-sm text-gray-500 mb-4">Project Manager for SCC Canteen real-time
+                                    monitoring system (Capstone Project).</p>
+                            </div>
+                            <div
+                                class="bg-blue-50/30 p-6 rounded-3xl border border-blue-50 hover:bg-blue-50/50 transition-all">
+                                <span class="resume-date">2024</span>
+                                <h4 class="font-bold text-gray-700 mb-2">Kasambahay Management</h4>
+                                <p class="text-sm text-gray-500 mb-4">Lead Programmer for Database Management system
+                                    project.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="glass-card p-8">
+                        <h2 class="resume-title"><span>💼</span> Experience</h2>
+                        <div class="space-y-6">
+                            <div class="resume-item">
+                                <span class="resume-date">2023 - 2025</span>
+                                <h4 class="font-bold text-gray-700">Affiliate Marketing</h4>
+                                <p class="text-sm text-gray-500">Managing digital marketing campaigns and partnerships.
+                                </p>
+                            </div>
+                            <div class="resume-item">
+                                <span class="resume-date">2022 - 2023</span>
+                                <h4 class="font-bold text-gray-700">ROTC Officer 2LT</h4>
+                                <p class="text-sm text-gray-500">Developed leadership and discipline through military
+                                    training management.</p>
+                            </div>
+                            <div class="resume-item">
+                                <span class="resume-date">2020 - 2021</span>
+                                <h4 class="font-bold text-gray-700">Private Tutor</h4>
+                                <p class="text-sm text-gray-500">Assisting students during the pandemic with academic
+                                    preparations.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="glass-card p-8">
+                        <h2 class="resume-title"><span>📜</span> Certifications</h2>
+                        <div class="grid sm:grid-cols-2 gap-4 text-xs text-gray-500">
+                            <div class="p-3 bg-white rounded-2xl shadow-sm border border-pink-50 italic">"Web Design
+                                Basics Certification | Simplilearn 2025"</div>
+                            <div class="p-3 bg-white rounded-2xl shadow-sm border border-blue-50 italic">"Digital
+                                Careers Expo (DCE) | DICT 2024"</div>
+                            <div class="p-3 bg-white rounded-2xl shadow-sm border border-purple-50 italic">"Project
+                                Management 101 | CS 2025"</div>
+                            <div class="p-3 bg-white rounded-2xl shadow-sm border border-pink-50 italic">"Microsoft
+                                Cybersecurity Course | Tesda 2025"</div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="bg-white/80 border-t border-pink-50 py-10">
+    <footer class="bg-white/80 border-t border-pink-50 py-10 mt-20">
         <div class="container mx-auto px-6 text-center">
+            <div class="title-font text-2xl text-pink-300 mb-4">Dreamy Journal</div>
             <p class="text-sm text-gray-400 font-medium">© 2026 Monthly Journal Project • Created for Academic
                 Submission</p>
         </div>

@@ -12,17 +12,34 @@
 <body class="bg-[#FFFBFC] min-h-screen">
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-white/50 border-b border-pink-100">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <a href="../index.html" class="title-font text-3xl font-bold text-[#FF9AA2]">Dreamy Journal</a>
-            <div class="hidden md:flex gap-8">
+            <div class="hidden lg:flex gap-1 xl:gap-2">
                 <a href="../index.html" class="nav-link">Home</a>
-                <a href="../about.html" class="nav-link">About</a>
-                <a href="index.html" class="nav-link active">Weekly Blog</a>
-                <a href="../gallery.html" class="nav-link">Gallery</a>
+                <a href="#" class="nav-link">Acknowledgement</a>
+                <a href="../about.html" class="nav-link">My Profile</a>
+                <a href="../school.html" class="nav-link">School Profile</a>
+                <a href="index.html" class="nav-link active">OJT Blogs</a>
+                <a href="#" class="nav-link">Internship Evidence</a>
+                <a href="#" class="nav-link">Eductour</a>
+                <a href="#" class="nav-link">ResearchFest</a>
+                <a href="#" class="nav-link">Trainings/Worshops</a>
             </div>
-            <button class="md:hidden text-2xl" id="menu-btn">🌸</button>
+            <button class="lg:hidden text-2xl text-pink-400" id="menu-btn">🌸</button>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-[#FFD1DC]/95 z-[60] flex flex-col items-center justify-center gap-8 text-2xl font-semibold hidden">
+        <button class="absolute top-6 right-6 text-3xl" id="close-menu">✕</button>
+        <span class="title-font text-4xl text-white mb-4">Dreamy Journal</span>
+        <a href="../index.html" class="hover:text-white transition-colors">Home</a>
+        <a href="../about.html" class="hover:text-white transition-colors">My Profile</a>
+        <a href="../school.html" class="hover:text-white transition-colors">School Profile</a>
+        <a href="index.html" class="hover:text-white transition-colors">OJT Blogs</a>
+        <a href="../gallery.html" class="hover:text-white transition-colors">Gallery</a>
+    </div>
 
     <!-- Content -->
     <main class="pt-32 pb-20 px-6">
@@ -30,7 +47,8 @@
             <header class="text-center mb-16">
                 <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Journey <span
                         class="gradient-text italic">Timeline</span></h1>
-                <p class="text-gray-500 max-w-xl mx-auto italic">Explore the weeks documenting my academic and personal
+                <p class="text-gray-500 max-w-xl mx-auto italic">Explore the weeks documenting my academic and
+                    personal
                     growth.</p>
             </header>
 
@@ -42,7 +60,8 @@
                             class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center text-2xl mb-6 group-hover:bg-pink-300 group-hover:rotate-12 transition-all">
                             🌱
                         </div>
-                        <span class="text-pink-400 font-bold text-xs uppercase tracking-widest mb-1">Dec 09 – Dec 15,
+                        <span class="text-pink-400 font-bold text-xs uppercase tracking-widest mb-1">Dec 09 – Dec
+                            15,
                             2025</span>
                         <h3 class="text-2xl font-bold mb-4">Week 1: New Roots</h3>
                         <p class="text-gray-500 text-sm leading-relaxed mb-6">
@@ -68,7 +87,8 @@
                     <div class="w-16 h-16 bg-lavender-50 rounded-full flex items-center justify-center text-2xl mb-6">
                         ✏️
                     </div>
-                    <span class="text-lavender-300 font-bold text-xs uppercase tracking-widest mb-1">Dec 23 – Dec 29,
+                    <span class="text-lavender-300 font-bold text-xs uppercase tracking-widest mb-1">Dec 23 – Dec
+                        29,
                         2025</span>
                     <h3 class="text-2xl font-bold mb-4 text-gray-400">Week 3: Holiday Thoughts</h3>
                     <p class="text-gray-400 text-sm italic">Documentation in progress...</p>
@@ -89,6 +109,7 @@
 
     <footer class="bg-white/80 border-t border-pink-50 py-10 mt-20">
         <div class="container mx-auto px-6 text-center">
+            <div class="title-font text-2xl text-pink-300 mb-4">Dreamy Journal</div>
             <p class="text-sm text-gray-400 font-medium">© 2026 Monthly Journal Project • Created for Academic
                 Submission</p>
         </div>
