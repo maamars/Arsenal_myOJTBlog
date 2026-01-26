@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 | My Dreamy Journal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="bg-[#FFFBFC] min-h-screen">
+    <nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-white/50 border-b border-pink-100">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="../index.html" class="title-font text-3xl font-bold text-[#FF9AA2]">Dreamy Journal</a>
+            <div class="hidden lg:flex gap-1 xl:gap-2">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Acknowledgement</a>
+                <a href="../about.html" class="nav-link">My Profile</a>
+                <a href="../school.html" class="nav-link">School Profile</a>
+                <a href="index.html" class="nav-link active">OJT Blogs</a>
+                <a href="#" class="nav-link">Internship Evidence</a>
+                <a href="#" class="nav-link">Eductour</a>
+                <a href="#" class="nav-link">ResearchFest</a>
+                <a href="#" class="nav-link">Trainings/Worshops</a>
+            </div>
+            <button class="lg:hidden text-2xl text-pink-400" id="menu-btn">🌸</button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-[#FFD1DC]/95 z-[60] flex flex-col items-center justify-center gap-8 text-2xl font-semibold hidden">
+        <button class="absolute top-6 right-6 text-3xl" id="close-menu">✕</button>
+        <span class="title-font text-4xl text-white mb-4">Dreamy Journal</span>
+        <a href="../index.html" class="hover:text-white transition-colors">Home</a>
+        <a href="../about.html" class="hover:text-white transition-colors">My Profile</a>
+        <a href="../school.html" class="hover:text-white transition-colors">School Profile</a>
+        <a href="index.html" class="hover:text-white transition-colors">OJT Blogs</a>
+        <a href="../gallery.html" class="hover:text-white transition-colors">Gallery</a>
+    </div>
+
+    <main class="pt-32 pb-20 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <div class="mb-8 flex items-center gap-2 text-sm text-gray-400 font-medium">
+                <a href="index.html" class="hover:text-pink-400 transition-colors">Weeks</a>
+                <span>›</span>
+                <span class="text-gray-600">Week 4</span>
+            </div>
+
+            <header class="mb-16">
+                <span class="text-pink-400 font-bold uppercase tracking-widest text-sm block mb-2">Jan 12 – Jan 16,
+                    2026</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Week 4: Deep Work</h1>
+                <p class="text-gray-500 italic max-w-2xl">Focusing on core tasks and project development.</p>
+            </header>
+
+            <!-- Daily Entries -->
+            <div class="space-y-12">
+                <!-- Day 1 -->
+                <article class="day-card animate-f-up relative">
+                    <div class="mb-6">
+                        <h2 class="text-2xl font-bold text-gray-800">Monday, Jan 12</h2>
+                        <span class="text-sm font-semibold text-blue-400">Deep Focus</span>
+                    </div>
+                    <div class="prose text-gray-600 leading-relaxed italic">
+                        "Starting a major component of the project. Requires full concentration."
+                    </div>
+                </article>
+
+                <!-- Day 2 -->
+                <article class="day-card animate-f-up relative">
+                    <div class="mb-6">
+                        <h2 class="text-2xl font-bold text-gray-800">Tuesday, Jan 13</h2>
+                        <span class="text-sm font-semibold text-pink-400">Problem Solving</span>
+                    </div>
+                    <div class="prose text-gray-600 leading-relaxed italic">
+                        "Encountered some bugs today. Debugging is part of the process."
+                    </div>
+                </article>
+
+                <!-- Day 3 -->
+                <article class="day-card animate-f-up relative">
+                    <div class="mb-6">
+                        <h2 class="text-2xl font-bold text-gray-800">Wednesday, Jan 14</h2>
+                        <span class="text-sm font-semibold text-lavender-400">Breakthrough</span>
+                    </div>
+                    <div class="prose text-gray-600 leading-relaxed italic">
+                        "Finally solved the issue from yesterday. Great feeling of accomplishment."
+                    </div>
+                </article>
+
+                <!-- Day 4 -->
+                <article class="day-card animate-f-up relative">
+                    <div class="mb-6">
+                        <h2 class="text-2xl font-bold text-gray-800">Thursday, Jan 15</h2>
+                        <span class="text-sm font-semibold text-blue-400">Refining</span>
+                    </div>
+                    <div class="prose text-gray-600 leading-relaxed italic">
+                        "Polishing the work done so far. Attention to detail is crucial."
+                    </div>
+                </article>
+
+                <!-- Day 5 -->
+                <article class="day-card animate-f-up relative">
+                    <div class="mb-6">
+                        <h2 class="text-2xl font-bold text-gray-800">Friday, Jan 16</h2>
+                        <span class="text-sm font-semibold text-pink-400">Documentation</span>
+                    </div>
+                    <div class="prose text-gray-600 leading-relaxed italic">
+                        "Spent the day documenting the code and updates. Ready for the weekend."
+                    </div>
+                </article>
+            </div>
+
+            <div class="mt-20 flex justify-between border-t border-pink-100 pt-10">
+                <a href="week3.html" class="text-pink-400 font-bold hover:underline">← Week 3</a>
+                <a href="week5.html" class="text-pink-400 font-bold hover:underline">Week 5 →</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white/80 border-t border-pink-50 py-10 mt-20">
+        <div class="container mx-auto px-6 text-center">
+            <div class="title-font text-2xl text-pink-300 mb-4">Dreamy Journal</div>
+            <p class="text-sm text-gray-400 font-medium">© 2026 Monthly Journal Project • Created for Academic
+                Submission</p>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
